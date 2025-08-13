@@ -18,7 +18,7 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
-            cd ~/test-cd || git clone https://github.com/ZebaroWhite-Alliance/test-repo ~/test-repo
+            cd ~/test-repo || git clone https://github.com/ZebaroWhite-Alliance/test-repo ~/test-repo
             cd ~/test-repo
             git pull
             pkill -f app.py || true
