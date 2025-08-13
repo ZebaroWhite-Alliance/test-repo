@@ -21,6 +21,4 @@ jobs:
             cd ~/test-repo || git clone https://github.com/ZebaroWhite-Alliance/test-repo ~/test-repo
             cd ~/test-repo
             git pull
-            pkill -f app.py || true
-            nohup python3 app.py > server.log 2>&1 &
-            disown
+            sudo systemctl restart test-repo.service
